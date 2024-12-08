@@ -1,0 +1,145 @@
+.hamburgerContainer {
+    color: #2cf599;
+    padding: 16px;
+    font-size: 24px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .menuIcon:hover {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menuIcon {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .menuWrap {
+    background-color: #00015e;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    display: flex;
+    align-items: start;
+    padding: 16px 40px;
+    height: 100vh;
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: right 0.3s ease-in-out;
+  }
+  
+  .menuOpen {
+    right: 0 !important;
+    overflow: auto;
+    position: fixed;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 180px;
+    padding-top: 40px;
+    font-size: 20px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .menu a:hover {
+    color: white;
+  }
+  
+  .menu a.active { 
+    color: white;
+    font-weight: bold; 
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+  
+  .closeButton:hover {
+    color: white;
+  }
+  
+  .burgerRegister {
+    background-color: white;
+    border: 2px solid white;
+    color: #00015e;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .burgerRegister:hover {
+    color: #2cf599 !important;
+  }
+  
+  .burgerRegister.active {
+    color: #00015e !important;
+    background-color: #2cf599;
+    border: 2px solid #2cf599;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+  }
+  
+  .burgerLogin{
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 8px;
+  }
+  
+  .burgerLogin.active{
+    color: #00015e !important;
+    background-color: #2cf599;
+    border: 2px solid #2cf599;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+  }
+
+  .priceInactive{
+    display: flex;
+    align-items: center;
+  }
+
+  .priceInactive span{
+    cursor: pointer;
+  }
+
+  .priceActive span{
+    cursor: pointer;
+  }
+
+  .priceActive{
+    display: flex;
+    align-items: center;
+  }
+
+  .submenu {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chevronIcon {
+    transition: transform 0.3s ease;
+    margin-left: 8px;
+  }
+
+  .chevronActive {
+    transform: rotate(0deg);
+  }
+  
+  .chevronInactive {
+    transform: rotate(-90deg);
+  }
+  
+  @media (max-width: 450px) {
+    .menuWrap {
+      padding: 16px 20px;
+    }
+  
+    .hamburgerContainer {
+      font-size: 18px;
+    }
+  }
+  

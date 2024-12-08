@@ -1,0 +1,105 @@
+.priceBoxContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 16px;
+    gap: 32px;
+  }
+  
+  .priceBoxContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #bff0d4;
+    text-align: center;
+    padding: 50px 24px;
+    border-radius: 8px;
+    width: 350px;
+    gap: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .selectedPackage {
+    border: 3px solid #00015e; 
+    background-color: var(--main-green);
+    transform: scale(1.05); 
+  }
+  
+  .priceBoxContent:hover {
+    transform: scale(1.02); 
+  }
+  
+
+  .special {
+    background-color: #36375f;
+    color: white !important;
+    transform: scale(1.1);
+  }
+  
+  .special h2{
+      color: white !important;
+    }
+  
+
+  .special.selectedPackage {
+    background-color: #00015e; 
+    border: 3px solid #ffcc00; 
+    transform: scale(1.1); 
+  }
+  
+  .priceBoxContainer h2 {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
+  
+  .priceImage {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .specialSymbole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+  }
+  
+  .specialSymboleContent {
+    width: 80%;
+    background-color: red;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 950px) {
+    .priceBoxContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .priceBoxContent {
+      width: auto;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .special {
+      background-color: #00015e;
+      color: white;
+      transform: scale(1);
+    }
+  }
+  

@@ -1,0 +1,160 @@
+.packageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 40px;
+  position: relative;
+}
+
+.compareHeadline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  line-height: 1;
+  color: var(--main-blue);
+}
+
+.packageHeadline {
+  position: absolute;
+  margin-left: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  top: 0px;
+  padding: 0 16px;
+  background-color: white;
+  color: #00015e;
+}
+
+.packageBorder {
+  border: 3px solid #00015e;
+  border-radius: 16px;
+}
+
+.serviceElementContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #00015e;
+  padding-top: 16px;
+  /* min-height: 500px; */
+}
+
+.serviceElementContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  padding: 40px 16px;
+  gap: 24px;
+}
+
+.halfSpace {
+  width: 50%;
+}
+
+.greenColor {
+  color: #2afc9b;
+}
+
+.serviceText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #00015e;
+}
+
+.serviceText h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.serviceImg {
+  display: flex;
+  justify-content: center;
+}
+
+.serviceImg img {
+  width: 90%;
+}
+
+.customList {
+  list-style: none;
+  padding: 0;
+}
+
+.customList li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.customList li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: #00015e;
+  font-size: 1.2em;
+}
+
+@media (max-width: 1200px) {
+  .serviceElementContent {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  .serviceText {
+    order: 1;
+    width: 100%;
+  }
+
+  .serviceImg {
+    width: 50% !important;
+    display: flex;
+    justify-content: center;
+    order: 2;
+  }
+}
+
+@media (max-width: 1000px) {
+  .serviceImg {
+    width: 100% !important;
+  }
+
+  .serviceImg img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .packageHeadline {
+    font-size: 30px;
+    top: 15px;
+  }
+
+  .serviceText h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .compareHeadline {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .packageContainer {
+    padding: 0 16px 0 16px;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .compareHeadline {
+    font-size: 24px;
+  }
+}

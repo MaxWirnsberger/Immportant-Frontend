@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--main-blue);
+  width: 800px;
+}
+
+.formGroupRow {
+  display: flex;
+  gap: 16px;
+}
+
+.formGroupRow >:first-child{
+  width: 400px; 
+}
+
+.formLabel {
+  margin-bottom: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.errorMessage{
+  color: red;
+  font-weight: 400;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.buttonActive {
+  background-color: var(--main-blue);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.buttonInactive {
+  background-color: #f1f1f1;
+  color: var(--main-blue);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.countryField{
+  max-width: 400px;
+}
+
+.Switch{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}

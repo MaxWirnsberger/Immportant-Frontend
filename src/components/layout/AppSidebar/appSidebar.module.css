@@ -1,0 +1,138 @@
+.sidebarContainer {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.01);
+  color: #00015e;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999;
+}
+
+.sidebarContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  overflow-y: auto;
+  padding-top: 16px;
+}
+
+.sidebarImage {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  padding-top: 16px;
+}
+
+.sidebarImage img {
+  max-height: 44px;
+}
+
+.sidebarButton {
+    width: calc(250px - 50px);
+}
+
+.sidebarButton a{
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    width: 100%;
+  }
+
+.sidebarButton button {
+  background-color: #00015e;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.sidebarButton button:hover {
+  background-color: #2af599;
+  color: #00015e;
+}
+
+.sidebarNavContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.sidebarNavContent {
+  display: flex;
+  width: calc(250px - 50px);
+}
+
+/* .sidebarNavContent a {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  padding: 8px 16px;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebarNavContent a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #00015e;
+  border-radius: 8px;
+}
+
+.sidebarNavContent img {
+  height: 45px;
+} */
+
+/* appSidebar.module.css */
+
+.navLink {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  padding: 8px 16px;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navLink.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.navLink:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #00015e;
+  border-radius: 8px;
+}
+
+.settingsButton {
+  position: absolute;
+  bottom: 100px;
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+
+.settingsButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.active {
+  background-color: #2af599;
+  color: #00015e;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .sidebarContainer{
+    display: none;
+  }
+}

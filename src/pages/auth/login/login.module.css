@@ -1,0 +1,69 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 232px);
+    color: #00015e;
+  }
+  
+  .loginContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    padding: 40px 16px;
+    gap: 24px;
+  }
+  
+  .loginFormContent{
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .formElements{
+    display: grid;
+    gap: 1rem;
+    width: 400px;
+  }
+  
+  .fieldLabel{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .fieldLabel p{
+    font-size: 0.875rem;
+  }
+
+  .loginErrorMessage{
+    color: red;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid red;
+    padding: 16px;
+  }
+  
+  .loginButton{
+      background-color: #00015e;
+  }
+  
+  .loginButton:hover{
+      background-color: #2cf599;
+      color: #00015e;
+  }
+  
+  @media (max-width: 440px) {
+    .loginFormContent h1{
+      font-size: 40px;
+    }
+  
+    .formElements{
+      width: 100%;
+    }
+  }

@@ -1,0 +1,19 @@
+.solutionBoxComponent{
+    background-color: #2CF599;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border: 2px solid #2CF599;;
+    transition: 0.1s ease!important;
+}
+
+.solutionBoxComponent p{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.solutionBoxComponent:hover{
+    background-color: transparent;
+    border: 2px solid #000056;
+}

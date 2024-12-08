@@ -1,0 +1,75 @@
+.navigationContainer{
+    position: fixed;
+    background-color: white;
+    bottom: 0;
+    left: calc(280px + 16px);
+    right: 16px;
+    z-index: 99;
+    padding: 16px 0px;
+}
+
+.navigationContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationContent button{
+    background-color: var(--main-green);
+    color: var(--main-blue);
+    font-size: 16px;
+}
+
+.navigationContent button:hover{
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.navigationContentFirstPage{
+    display: flex;
+    justify-content: end;
+}
+
+.navigationContentFirstPage button{
+    background-color: var(--main-green);
+    color: var(--main-blue);
+    font-size: 16px;
+}
+
+.navigationContentFirstPage button:hover{
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.lastButton{
+    background-color: var(--main-blue)!important;
+    color: white!important;
+    font-size: 16px;
+}
+
+.lastButton:hover{
+    background-color: var(--main-green)!important;
+    color: var(--main-blue)!important;
+}
+
+@media (max-width: 800px) {
+    .navigationContainer{
+        left: 0;
+        right: 0;
+        bottom: 95px;
+    }
+
+    .navigationContentFirstPage{
+        padding-right: 16px;
+    }
+
+    .navigationContent{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navigationContainer{
+        bottom: 92px;
+    }
+}

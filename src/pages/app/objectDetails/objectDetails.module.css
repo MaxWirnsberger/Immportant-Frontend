@@ -1,0 +1,12 @@
+.multiFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

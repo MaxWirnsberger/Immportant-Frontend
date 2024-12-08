@@ -1,0 +1,151 @@
+.header {
+  background-color: #00015e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav ul li {
+  padding: 8px 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.priceMenu {
+  position: relative;
+  color: #fff;
+  cursor: context-menu;
+  font-size: 18px;
+}
+
+.priceMenuActive {
+  color: #2cf599;
+}
+
+.priceMenu:hover {
+  color: #2cf599;
+}
+
+.submenuElement{
+  display: none;
+}
+
+.priceMenu:hover > .submenuElement {
+  display: block !important; 
+}
+
+.nav a:hover {
+  color: #2cf599;
+}
+
+.active a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.authLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerLogin a {
+  border: 2px solid white;
+  padding: 4px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease !important;
+}
+
+.headerLogin:hover a {
+  background-color: #fff;
+  color: #00015e;
+}
+
+.headerLogin.active a {
+  background-color: #2cf599;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  color: #00015e;
+  border: 2px solid #2cf599;
+}
+
+.headerLink a {
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 16px;
+  color: #00015e !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.headerLink:hover a {
+  background-color: #2cf599;
+}
+
+.headerLink.active a {
+  background-color: #2cf599;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  color: #00015e;
+}
+
+.responsiveMenu {
+  display: none;
+}
+
+@media (max-width: 1130px) {
+  .nav a {
+    font-size: 16px;
+  }
+
+  .nav ul {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 985px) {
+  .nav ul {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav {
+    display: none;
+  }
+
+  .responsiveMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo{
+    padding-right: 40px;
+  }
+}

@@ -1,0 +1,88 @@
+.problemContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #00015e;
+  font-weight: 500;
+}
+
+.problemContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.problemHeadline {
+  font-size: 32px;
+  line-height: 1.2;
+  width: 850px;
+}
+
+.problemBoxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.problemElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 60px;
+}
+
+.problemElement span {
+  text-align: center;
+}
+
+.problemBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2cf599;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 100px;
+  max-height: 100px;
+  width: 100px;
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+@media (max-width: 900px) {
+  .problemHeadline {
+    width: auto;
+  }
+}
+
+@media (max-width: 780px) {
+  .problemHeadline {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .problemHeadline {
+    font-size: 28px;
+  }
+
+  .problemBoxes {
+    flex-direction: column;
+  }
+
+  .problemElement {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+    .problemHeadline {
+        font-size: 20px;
+      }
+  }

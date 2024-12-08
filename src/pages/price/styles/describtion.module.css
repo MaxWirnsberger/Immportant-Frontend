@@ -1,0 +1,84 @@
+.describtionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--main-blue);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.describtionContent {
+  max-width: 1440px;
+  width: 100%;
+  margin: 80px 0 10px 0;
+  padding: 24px 24px;
+  border: 2px solid var(--main-blue);
+  border-radius: 8px;
+}
+
+.describtionContent h3 {
+  /* text-align: center; */
+  padding-bottom: 16px;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.mobileHeadline{
+  display: none;
+}
+
+.describtionList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  padding: 16px 0px 16px 20px;
+}
+
+.ButtonSection {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+}
+
+.ButtonSection button {
+  background-color: var(--main-blue);
+  width: 150px;
+}
+
+.ButtonSection button:hover {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  width: 150px;
+}
+
+@media (max-width: 800px) {
+  .describtionList li{
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktopHeadline{
+    display: none;
+  }
+
+  .mobileHeadline{
+    display: contents;
+  }
+}
+
+@media (max-width: 500px) {
+  .describtionContent h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ButtonSection {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+}

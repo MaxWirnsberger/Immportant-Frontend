@@ -1,0 +1,214 @@
+.registerTabs {
+  color: var(--main-blue);
+  margin-top: 70px;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  max-width: 800px;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.categoryButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.categoryButton {
+  padding: 8px 16px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.categoryButton.perfect {
+  /* background-color: #d4edda;  */
+  background-color: transparent;
+  border: 2px solid #c3e6cb;
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.categoryButton.maybe {
+  /* background-color: #fff3cd;  */
+  background-color: transparent;
+  border: 2px solid #ffeeba;
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.categoryButton.unattractive {
+  /* background-color: #f8d7da; */
+  background-color: transparent;
+  border: 2px solid #f5c6cb;
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.categoryButton.active.perfect {
+  background-color: var(--main-green);
+  border: 2px solid var(--main-green);
+  color: var(--main-blue);
+}
+
+.categoryButton.active.maybe {
+  background-color: yellow;
+  color: var(--main-blue);
+}
+
+.categoryButton.active.unattractive {
+  background-color: #dc3545; 
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.is_readButton {
+  border-radius: 8px;
+  border: 2px solid var(--main-blue);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.is_readButton:hover {
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.is_readButton.active {
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.favoritButton {
+  border-radius: 100%;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.favoritButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.filledIcon {
+  color: var(--main-green);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.paddingTop24 {
+  padding-top: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fieldLabel {
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: var(--main-blue);
+}
+
+.fieldGroup input[readonly],
+.fieldGroup textarea[readonly] {
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: default;
+}
+
+.calenderButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: var(--main-blue);
+  border-radius: 8px;
+  border: 2px solid var(--main-blue);
+  color: white;
+  padding: 8px 16px;
+}
+
+.calenderButton:hover {
+  background-color: var(--main-green);
+  border: 2px solid var(--main-green);
+  color: var(--main-blue);
+}
+
+.messageDeleteButton {
+  /* background-color: red; */
+  border-radius: 8px;
+  border: 2px solid #dc3545;
+  color: var(--main-blue);
+  padding: 8px 16px;
+}
+
+.messageDeleteButton:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+@media (max-width: 550px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .is_readButton {
+    font-size: 14px;
+  }
+}
+
+/* Styling für den Chat */
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f5f5f5;
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.ownerMessage {
+  align-self: flex-end;
+  background-color: var(--main-green);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 60%;
+}
+
+.interestedPartyMessage {
+  align-self: flex-start;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 60%;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 4px;
+}

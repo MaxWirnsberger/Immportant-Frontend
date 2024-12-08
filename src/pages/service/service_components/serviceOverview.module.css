@@ -1,0 +1,176 @@
+.container {
+  max-width: 1440px;
+  margin-left: auto; 
+  margin-right: auto;
+  padding-left: 1rem; 
+  padding-right: 1rem;
+  padding-top: 2rem; 
+  padding-bottom: 10rem;
+}
+
+.mt-8 {
+  margin-top: 2rem; 
+}
+
+.gridContainer {
+  display: grid; 
+  gap: 1.5rem; 
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Typografie und Textausrichtung */
+.heading {
+  font-size: 3rem; 
+  font-weight: bold; 
+  text-align: center; 
+  margin-bottom: 2rem; 
+  color: var(--main-blue);
+  line-height: 1;
+}
+
+.textCenter {
+  text-align: center; 
+}
+
+.textPrimary {
+  color: var(--main-blue); 
+}
+
+.hoverUnderline a {
+  text-decoration: none;
+}
+
+.hoverUnderline a:hover {
+  text-decoration: underline; 
+}
+
+/* Flexbox und Ausrichtung */
+.flex {
+  display: flex;
+}
+
+.itemsCenter {
+  align-items: center; 
+}
+
+.justifyAround {
+  justify-content: space-around; 
+}
+
+.flexCol {
+  flex-direction: column; 
+}
+
+.flexRow {
+  flex-direction: row; 
+}
+
+.gap4 {
+  gap: 1rem; 
+}
+
+/* Abstände */
+.mb2 {
+  margin-bottom: 0.5rem; 
+}
+
+.mt8 {
+  margin-top: 2rem; 
+}
+
+.mr2 {
+  margin-right: 0.5rem; 
+}
+
+.py2 {
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
+}
+
+.px4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Größenangaben */
+.w8 {
+  width: 2rem; 
+}
+
+.h8 {
+  height: 2rem; 
+}
+
+.w6 {
+  width: 1.5rem;
+}
+
+.h6 {
+  height: 1.5rem;
+}
+
+.w5 {
+  width: 1.25rem;
+}
+
+.h5 {
+  height: 1.25rem;
+}
+
+/* Badge und Textgröße */
+.textLg {
+  font-size: 1.125rem; 
+  line-height: 1.75rem;
+}
+
+/* Spezifische Klassen für Komponenten */
+.serviceIcon {
+  margin-bottom: 0.5rem; 
+  color: var(--primary-color); 
+}
+
+.cardTitleFlex {
+  display: flex;
+  align-items: center; 
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center; 
+  gap: 1rem; 
+}
+
+@media (min-width: 640px) {
+  .flexContainer {
+    flex-direction: row; 
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .overviewText{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .heading {
+    font-size: 24px;
+  }
+}

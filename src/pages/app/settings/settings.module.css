@@ -1,0 +1,34 @@
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 300px;
+    padding-top: 70px;
+  }
+  
+  .button {
+    background-color: white;
+    border: 2px solid var(--main-blue);
+    color: var(--main-blue);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: var(--main-green);
+    font-weight: 500;
+    color: var(--main-blue);
+  }
+
+  @media (max-width: 800px) {
+    .buttonsContainer {
+      min-width: 100%;
+      max-width: 100%;
+    }  
+  }

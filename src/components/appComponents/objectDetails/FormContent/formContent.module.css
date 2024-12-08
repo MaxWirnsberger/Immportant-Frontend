@@ -1,0 +1,224 @@
+.FormContainer {
+  padding-top: 24px;
+  flex: 1;
+}
+
+.FormContent {
+  min-height: 100%;
+  padding: 20px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--main-blue);
+  margin-bottom: 60px;
+  max-width: 700px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subheadline {
+  font-size: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+.formGroupRow {
+  display: flex;
+  gap: 16px;
+}
+
+.threeFormGroupRow {
+  display: flex;
+  gap: 16px;
+}
+
+.halfRow {
+  width: 50%;
+}
+
+.formLabel {
+  margin-bottom: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: 400;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.buttonActive {
+  background-color: var(--main-blue);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonInactive {
+  background-color: #f1f1f1;
+  color: var(--main-blue);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonActive:hover,
+.buttonInactive:hover {
+  opacity: 0.8;
+}
+
+.countryField {
+  max-width: 400px;
+}
+
+.Switch {
+  display: flex;
+  flex-direction: column;
+}
+
+.areaInputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 500px;
+}
+
+.checkboxField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planningMetrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 500px;
+}
+
+/* Neue CSS-Klassen für RealEstateAttachments */
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  position: relative;
+  width: 50%;
+  color: var(--main-blue);
+}
+
+.dropzoneActive {
+  border-color: var(--main-blue);
+}
+
+.dropzoneLabel {
+  cursor: pointer;
+}
+
+.dropzoneText {
+  font-size: 16px;
+}
+
+.inputFile {
+  display: none;
+}
+
+.filePreviewGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.filePreviewItem {
+  position: relative;
+}
+
+.imagePreview {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.selectTrigger {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.fileList {
+  margin-top: 16px;
+}
+
+.fileListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.textPrimary {
+  color: var(--main-blue);
+}
+
+@media (max-width: 1150px) {
+  .FormContent {
+    max-width: 1150px;
+  }
+}
+
+@media (max-width: 520px) {
+  .threeFormGroupRow {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .buttonGroup {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .formGroupRow {
+    flex-direction: column;
+  }
+
+  .halfRow{
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.softwareViewContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00015e;
+}
+
+.softwareViewContent {
+  background-image: url("/images/mainpage/softwareView/backgroundIMG.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  width: 100%;
+  max-width: 1440px;
+  padding: 80px 16px;
+  font-weight: 500;
+}
+
+.softwareViewText h2 {
+  font-size: 32px;
+}
+
+.ViewContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+@media (max-width: 860px) {
+  .ViewContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .softwareViewText h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .softwareViewText h2 {
+    font-size: 20px;
+  }
+}

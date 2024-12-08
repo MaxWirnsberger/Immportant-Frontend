@@ -1,0 +1,37 @@
+.contactBoxesContainer {
+  margin-top: 60px;
+}
+
+.contactBoxesContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactBoxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2af599;
+  border-radius: 8px;
+  padding: 16px;
+  width: 260px;
+  gap: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.boxHeadline {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.boxUnderHeadline {
+  font-style: italic;
+  font-size: smaller;
+}
+
+@media (max-width: 600px) {
+  .contactBoxesContent{
+    flex-direction: column;
+  }
+}

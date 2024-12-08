@@ -1,0 +1,14 @@
+.privacyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #00015e;
+  height: 80vh;
+}
+
+.privacyContent {
+  max-width: 1440px;
+  width: 100%;
+  padding: 40px 16px;
+}

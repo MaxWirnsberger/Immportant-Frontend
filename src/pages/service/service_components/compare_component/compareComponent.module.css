@@ -1,0 +1,126 @@
+.card {
+  width: 100%;
+  max-width: 24rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardHighlighted {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+.cardHeader {
+  position: relative;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.cardTitle {
+  text-align: center;
+}
+
+.cardContent {
+  padding-top: 1.5rem;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  max-height: 1.25rem;
+  max-width: 1.25rem;
+}
+
+.iconAvailable {
+  color: #22c55e;
+}
+
+.iconNotAvailable {
+  color: #ef4444;
+}
+
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 60px;
+  height: auto;
+  width: auto;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .logo{
+    width: 200px;
+  }
+
+  .cardHighlighted{
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+/* @media (max-width: 375px) {
+  .card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+} */

@@ -1,0 +1,52 @@
+.ThankYouContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 232px);
+    color: #00015E;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.ThankYouContainer h1{
+    text-align: center;
+}
+
+.greenHeadline{
+    color: #2afc9b;
+}
+
+.ThankYouContainer span{
+    text-align: center;
+    padding-top: 16px;
+}
+
+.ThankYouLink{
+    color: #2afc9b;
+    transition: 0.3s ease !important;
+}
+
+.ThankYouLink:hover{
+    color: #00015E;
+    text-decoration: underline;
+}
+
+.ThanksButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #00015E;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-top: 24px;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease !important;
+  }
+  
+  .ThanksButton:hover {
+    background-color: #2afc9ad0;
+    color: #00015E;;
+    gap: 16px;
+  }

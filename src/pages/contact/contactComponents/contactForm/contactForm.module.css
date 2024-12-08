@@ -1,0 +1,38 @@
+.formContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formLink {
+  color: #2af599;
+}
+
+.formButton {
+  background-color: #00015e;
+  color: #2af599;
+  width: 150px;
+}
+
+.formButton:hover {
+  background-color: #00015e;
+  color: white;
+}
+
+.fieldLabel{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fieldLabel p{
+  font-size: 0.875rem;
+}
+
+@media (max-width:1300px) {
+  .formContainer {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}

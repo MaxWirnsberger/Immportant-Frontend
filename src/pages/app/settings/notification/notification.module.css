@@ -1,0 +1,10 @@
+.notificationContainer{
+    margin-top: 70px;
+}
+
+.notificationContainer h3{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--main-blue);
+    padding-bottom: 16px;
+}

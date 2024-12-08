@@ -1,0 +1,44 @@
+.introductionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #00015e;
+}
+
+.introductionContent {
+  max-width: 1440px;
+  width: 100%;
+  padding: 80px 16px 10px 16px;
+}
+
+.introductionContent h2 {
+  text-align: center;
+  padding-bottom: 16px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.introductionContent h3 {
+  text-align: center;
+  padding-bottom: 16px;
+  font-size: 40px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .introductionContent h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .introductionContent h2 {
+    font-size: 30px;
+  }
+
+  .introductionContent h3 {
+    font-size: 25px;
+  }
+}

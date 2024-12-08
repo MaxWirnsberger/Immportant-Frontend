@@ -1,0 +1,134 @@
+.packageComponent {
+  /* background-color: var(--main-blue); */
+  background-color: #00025e15;
+  margin: 100px 0;
+  position: relative;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.card {
+  position: absolute;
+  bottom: 16px;
+  max-width: 36rem;
+  margin: 24px auto;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid var(--main-blue);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/* Card Header */
+.cardHeader {
+  text-align: center;
+  padding: 1rem;
+}
+
+.cardHeader h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.cardHeader p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  padding: 0 1.5rem;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Price Display */
+.price {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+/* Features List */
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featureItemIcon {
+  height: 1rem;
+  width: 1rem;
+  color: var(--main-blue);
+  flex-shrink: 0;
+}
+
+.featureItemText {
+  font-size: 0.875rem;
+}
+
+/* Button */
+.buttonComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonComponent button {
+  background-color: var(--main-blue);
+}
+
+.buttonComponent button:hover {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+}
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .packageComponent {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .packageComponent {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 370px) {
+  .packageComponent {
+    margin-top: 250px;
+  }
+}
+
+@media (max-width: 280px) {
+  .packageComponent {
+    margin-top: 300px;
+  }
+}

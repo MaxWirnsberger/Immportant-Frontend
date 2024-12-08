@@ -1,0 +1,199 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 14400px;
+  color: var(--main-blue) !important;
+}
+
+.loadingCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 100%;
+}
+
+.portalFields {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.activeBackground {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.inactiveBackground {
+  background-color: lightgrey;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.portalStatusText {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.pageTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.cardContent {
+  position: relative;
+  height: 12rem;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.iconLeft {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iconRight {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.standardTextColor {
+  color: var(--main-blue) !important;
+  height: 100%;
+}
+
+.portalElements{
+  padding-top: 40px;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textBold {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.textGray {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.table {
+  width: 100%;
+}
+
+.tableHead,
+.tableCell {
+  padding: 0.75rem;
+}
+
+.progress {
+  width: 100%;
+}
+
+.progressText {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.dashboardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.noDataMessage {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  color: var(--main-blue);
+}
+
+
+.mobileCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.mobileCard p {
+  margin: 0.5rem 0;
+  color: var(--main-blue);
+}
+
+
+@media (min-width: 1200px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .portalElements{
+    padding-top: 0;
+  }
+
+  .loadingCenter {
+    height: 50%;
+  }
+}
+
+@media (max-width: 490px) {
+  .flexBetween {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .flexBetween {
+    gap: 16px;
+  }
+}

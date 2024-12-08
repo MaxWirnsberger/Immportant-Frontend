@@ -1,0 +1,89 @@
+/* dataTableComponent.module.css */
+
+/* Allgemeine Stile für die Datentabelle */
+.dataTableContainer {
+    width: 100%;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen auf kleinen Bildschirmen */
+  }
+  
+  .dataTableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Tabellenkopf-Stile */
+  .tableHeader {
+    background-color: #f5f5f5;
+  }
+  
+  .tableHeader th {
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Tabellenkörper-Stile */
+  .tableBody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+  
+  /* Responsive Anpassungen */
+  @media (max-width: 768px) {
+    /* Weniger wichtige Spalten auf kleinen Bildschirmen ausblenden */
+    .hideOnMobile {
+      display: none;
+    }
+  
+    /* Padding und Schriftgrößen anpassen */
+    .tableHeader th,
+    .tableBody td {
+      padding: 8px 4px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Alternative: Tabellenzeilen auf kleinen Bildschirmen in Karten umwandeln */
+  @media (max-width: 600px) {
+    .dataTableContainer table,
+    .dataTableContainer thead,
+    .dataTableContainer tbody,
+    .dataTableContainer th,
+    .dataTableContainer td,
+    .dataTableContainer tr {
+      display: block;
+    }
+  
+    .tableHeader {
+      display: none; /* Tabellenkopf ausblenden */
+    }
+  
+    .tableBody tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #fff;
+    }
+  
+    .tableBody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+    }
+  
+    .tableBody td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #333;
+      flex-basis: 40%;
+      text-align: left;
+    }
+  
+    .tableBody td:last-child {
+      border-bottom: none;
+    }
+  }
+  

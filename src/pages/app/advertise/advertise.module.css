@@ -1,0 +1,225 @@
+.portalManagementContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 60px;
+  max-width: 1000px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.portalManagementContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+}
+
+.cardHeader {
+  padding-bottom: 0.5rem;
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitleText {
+  font-size: 1.5rem;
+}
+
+.selectTrigger {
+  width: 140px;
+}
+
+.selectValue {
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.selectItem {
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.spaceY6 {
+  margin-top: 1rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeArea {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.flexItemsCenter {
+  display: flex;
+  align-items: center;
+}
+
+.calendarIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+  color: var(--text-muted-foreground);
+}
+
+.textMutedForeground {
+  color: var(--text-muted-foreground);
+}
+
+.activationDateText {
+  font-size: 0.875rem;
+  color: var(--text-muted-foreground);
+}
+
+.expirationDateText {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.emptyContainer {
+  display: flex;
+  align-items: center;
+  color: var(--main-blue);
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  color: #f87171;
+  background-color: #fef2f2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.errorIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+  color: #22c55e;
+  background-color: #f0fdf4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.statusIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.statusTextSmall {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statusTextBase {
+  font-size: 1rem;
+}
+
+.confirmButton {
+  width: 100%;
+  background-color: var(--main-blue);
+}
+
+.confirmButton:hover {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+}
+
+.activateButton {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  border: 2px solid var(--main-green);
+}
+
+.activateButton:hover {
+  background-color: rgba(37, 194, 23, 0.08);
+  border: 2px solid var(--main-green);
+  color: var(--main-green);
+}
+
+.deactivateButton {
+  border: 2px solid #f87171;
+  color: #fef2f2;
+  background-color: #f87171;
+}
+
+.deactivateButton:hover {
+  background-color: #fef2f2;
+  border: 2px solid #f87171;
+  color: #f87171;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px; /* Abstand vom Bild */
+}
+
+.activeStatus {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.inactiveStatus {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.loadingCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--main-green);
+}
+
+@media (max-width: 500px) {
+  .timeArea {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+@media (max-width: 350px) {
+  .buttonContainer {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}

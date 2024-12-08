@@ -1,0 +1,54 @@
+.priceContainer {
+  padding-bottom: 160px;
+  color: #00015e;
+}
+
+.subheadline{
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.subheadline h3{
+  font-size: 40px;
+  color: #00015e;
+}
+
+.priceTextContainer h3{
+  font-size: 24px;
+  padding-bottom: 8px;
+}
+
+.priceTextContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.priceText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  padding-bottom: 40px;
+  /* padding-left: 16px;
+  padding-right: 16px; */
+}
+
+.PriceBoxContainer{
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 500px) {
+  .subheadline h3{
+    font-size: 25px;
+    line-height: 1;
+  }
+}

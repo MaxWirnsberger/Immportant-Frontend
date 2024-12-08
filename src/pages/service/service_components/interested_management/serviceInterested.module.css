@@ -1,0 +1,58 @@
+.serviceElementContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #00015e;
+  min-height: 600px;
+}
+
+.serviceElementContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  padding: 40px 16px;
+  gap: 24px;
+}
+
+/* .halfSpace {
+    width: 50%;
+  }
+  
+  .greenColor {
+    color: #2afc9b;
+  }
+  
+  .serviceText {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #00015e;
+  }
+  
+  .serviceText h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .customList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .customList li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .customList li::before {
+    content: "\2713"; 
+    position: absolute;
+    left: 0;
+    color: #00015e;
+    font-size: 1.2em;
+  } */

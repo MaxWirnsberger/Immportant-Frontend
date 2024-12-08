@@ -1,0 +1,38 @@
+/* invoice.module.css */
+
+.invoiceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.invoiceTable th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.loader span {
+  margin-left: 8px;
+}
+
+.pdfLink {
+  color: var(--main-green);
+}
+
+@media (max-width: 450px) {
+  .invoiceTable {
+    font-size: 12px;
+  }
+}

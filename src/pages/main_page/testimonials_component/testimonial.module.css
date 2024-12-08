@@ -1,0 +1,137 @@
+.testimonialContainer {
+  background-color: #00025e15;
+  color: var(--main-blue);
+  padding-top: 80px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonialContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.quotationImg {
+  position: absolute;
+  top: -120px;
+  right: 0;
+  z-index: -1;
+}
+
+.testimonialBoxes {
+  width: 100%;
+}
+
+.testimonialText h2 {
+  font-size: 32px;
+}
+
+.testimonialCarouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonialCarouselConten {
+  width: 95%;
+}
+
+.testimonialCarouselConten button {
+  background-color: transparent;
+  border: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.testimonialCarouselConten button:hover {
+  background-color: transparent;
+}
+
+.testimonialCarouselConten button:hover svg {
+  color: var(--main-green);
+  width: 60px;
+  height: 60px;
+  transition: 0.3s ease !important;
+}
+
+.testimonialCarouselConten button svg {
+  color: var(--main-blue);
+  width: 50px;
+  height: 50px;
+}
+
+.testimonialCarouselBox {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* @media (max-width: 960px) {
+  .testimonialText span{
+    background-color: var(--main-green);
+  }
+
+  .testimonialText h2{
+    background-color: var(--main-green);
+  }
+} */
+
+@media (max-width: 960px) {
+  .testimonialText span {
+    background-color: var(--main-green);
+  }
+
+  .testimonialHeadline {
+    display: inline-block;
+    background-color: var(--main-green);
+  }
+}
+
+
+@media (max-width: 860px) {
+  .testimonialCarouselContainer {
+    padding: 40px 0px;
+  }
+
+  .testimonialCarouselBox {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .responsiveCarousel {
+    height: 700px;
+  }
+}
+
+@media (max-width: 570px) {
+  .responsiveCarousel {
+    height: 650px;
+  }
+}
+
+@media (max-width: 520px) {
+  .testimonialText h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .testimonialCarouselBox {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (max-width: 420px) {
+    .testimonialText h2 {
+      font-size: 20px;
+    }
+  }

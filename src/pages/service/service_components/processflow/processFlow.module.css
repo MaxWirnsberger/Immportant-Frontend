@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 16px;
+  color: var(--main-blue);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.subtitle {
+  color: #6b7280;
+}
+
+.grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+}
+
+.cardContent {
+  padding-top: 24px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--main-green);
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--main-blue);
+}
+
+.stepDescription {
+  color: #6b7280;
+}
+
+.finalStepIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  border-radius: 50%;
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.ctaButton {
+  background-color: var(--main-blue);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ctaButton {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

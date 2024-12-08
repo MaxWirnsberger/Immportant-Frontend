@@ -1,0 +1,97 @@
+.newObjectButton {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 70px;
+}
+
+.newObjectButton button {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  font-weight: 500;
+  border-radius: var(--btn-border-radius);
+  width: 180px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.newObjectButton button:hover {
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.objectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--btn-border-radius);
+  transition: box-shadow 0.3s ease;
+}
+
+.cardHover:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  height: 192px;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: var(--btn-border-radius);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #e5e7eb;
+}
+
+.placeholderIcon {
+  width: 48px;
+  height: 48px;
+  color: #9ca3af;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--main-blue);
+}
+
+.cardAddress {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.mapPinIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+@media (max-width: 800px) {
+  .objectContainer {
+    justify-content: center;
+  }
+}

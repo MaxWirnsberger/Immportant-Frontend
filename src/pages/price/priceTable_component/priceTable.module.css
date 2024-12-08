@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #00015e;
+}
+
+.pricePlansContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pricePlan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 20rem;
+  width: 100%;
+}
+
+.pricePlan.highlighted {
+  border: 2px solid #00015e;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.planTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  height: 80px;
+}
+
+.planDescription {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  height: 40px;
+}
+
+.planPrice {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.separator {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+}
+
+.featureIcon {
+  color: #2cf599;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.actionButton.default {
+  background-color: #f3f4f6; 
+  color: #00015e; 
+}
+
+.actionButton.highlighted {
+  background-color: #00015e;
+  color: white;
+}
+
+.actionButton.default:hover {
+  background-color: #2cf599; 
+}
+
+.actionButton.highlighted:hover {
+  background-color: #2cf599; 
+  color: #00015e; 
+}
+
+@media (max-width: 1050px) {
+  .container {
+    justify-content: center;
+  }
+  
+  .pricePlansContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,29 @@
+.appMainContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  padding: 75px 16px 16px 0;
+}
+
+.appMainContainer h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--main-blue);
+}
+
+@media (max-width: 800px) {
+  .appMainContainer {
+    padding: 16px 0 100px 0px;
+  }
+
+  .appMainContainer h2 {
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .appMainContainer h2 {
+    font-size: 26px;
+  }
+}

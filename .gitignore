@@ -1,0 +1,40 @@
+# Node.js spezifisch
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Output von npm / yarn
+package-lock.json
+yarn.lock
+
+# Next.js Build Output
+.next/
+out/
+
+# Static Files
+*.log
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Unnötige Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
+
+# Lokale IDE und Editor-Dateien
+.idea/
+.vscode/
+*.swp
+
+# Cache-Dateien
+.cache/
+*.cache
+*.tmp
+*.bak
+
+# Next.js spezifische Dateien
+.next/
+.next/cache/
+next-env.d.ts

@@ -1,0 +1,88 @@
+.submenu {
+    position: absolute;
+    top: 100%;
+    right: -250px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 500px;
+    max-width: 500px;
+    height: 200px;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .submenuContent {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .imageContainer {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .submenuImage {
+    position: absolute;
+    top: 0px;
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+  }
+
+  .optionsMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 0px!important;
+  }
+
+  .optionsTitle{
+    color: #00015e;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-decoration: underline;
+  }
+  
+  .optionItem {
+    padding: 8px 15px!important;
+  }
+  
+  .optionItem {
+    color: #00015e!important;
+    text-decoration: none;
+  }
+
+  .optionItem:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .optionItem:hover{
+    color: #2afc9b!important;
+  }
+  
+  .descriptionContainer {
+    margin-top: 10px;
+  }
+  
+  .menuDescription {
+    margin: 10px 15px;
+    font-size: 16px;
+    color: #666;
+  }
