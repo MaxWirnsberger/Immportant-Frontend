@@ -22,6 +22,7 @@ interface ContactFormInputs {
   age: number;
   job?: string;
   phone?: string;
+  agreed: boolean;
 }
 
 const schema = yup.object().shape({
@@ -35,6 +36,10 @@ const schema = yup.object().shape({
   age: yup.number().default(0),
   job: yup.string(),
   phone: yup.string(),
+  agreed: yup
+    .boolean()
+    .oneOf([true], "Du musst die Richtlinien zum Datenschutz bestätigen")
+    .required("Du musst die Richtlinien zum Datenschutz bestätigen"),
 });
 
 export default function Register() {
@@ -212,6 +217,28 @@ export default function Register() {
                   />
                 </div>
               </div>
+              <div className="flex items-center">
+                <Checkbox
+                  id="agreed"
+                  onCheckedChange={(checked) =>
+                    setValue("agreed", checked as boolean)
+                  }
+                />
+                <div className={styles.fieldLabel}>
+                  <Label htmlFor="agreed" className="ml-2">
+                    Ich bin mit den{" "}
+                    <Link href="/legal/privacy" className={styles.formLink}>
+                      Datenschutzbestimmungen
+                    </Link>{" "}
+                    einverstanden
+                  </Label>
+                </div>
+              </div>
+              <Label className="ml-2">
+                {errors.agreed && (
+                  <p className="text-red-500">{errors.agreed?.message}</p>
+                )}
+              </Label>
               {isSubmitting ? (
                 <Button disabled>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

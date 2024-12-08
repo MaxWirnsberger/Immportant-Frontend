@@ -77,6 +77,10 @@
   font-size: 0.875rem;
 }
 
+.formLink {
+  color: #2af599;
+}
+
 @media (max-width: 1230px) {
   .FormFields {
     width: 500px;
