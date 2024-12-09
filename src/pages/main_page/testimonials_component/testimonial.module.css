@@ -95,7 +95,6 @@
   }
 }
 
-
 @media (max-width: 860px) {
   .testimonialCarouselContainer {
     padding: 40px 0px;
@@ -107,13 +106,13 @@
   }
 
   .responsiveCarousel {
-    height: 700px;
+    height: 950px;
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 640px) {
   .responsiveCarousel {
-    height: 650px;
+    height: 1000px;
   }
 }
 
@@ -131,7 +130,13 @@
 }
 
 @media (max-width: 420px) {
-    .testimonialText h2 {
-      font-size: 20px;
-    }
+  .testimonialText h2 {
+    font-size: 20px;
   }
+}
+
+@media (max-width: 340px) {
+  .responsiveCarousel {
+    height: 1100px;
+  }
+}

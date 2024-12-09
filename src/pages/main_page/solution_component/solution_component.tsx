@@ -7,9 +7,9 @@ export default function SolutionComponent() {
       <div className={styles.solutionContent}>
         <div className={styles.solutionImages}>
           <Image
-            src="/images/mainpage/solution/solution_img2.webp"
+            src="/images/mainpage/solution/solution_img3.webp"
             alt="SolutionImage"
-            width={600}
+            width={770}
             height={520}
             className={styles.solutionImg}
           />

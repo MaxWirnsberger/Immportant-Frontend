@@ -45,11 +45,10 @@
   border-radius: 8px;
 }
 
-
-.CTAText h3{
-font-size: 24px;
-font-weight: 700;
-color: var(--main-green);
+.CTAText h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-green);
 }
 
 .heroButton {
@@ -82,7 +81,7 @@ color: var(--main-green);
   right: 0;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1580px) {
   .heroBanner img {
     top: 150px;
   }
@@ -95,6 +94,26 @@ color: var(--main-green);
   .heroBorder {
     width: 620px !important;
     height: 620px !important;
+  }
+}
+
+@media (max-width: 1270px) {
+  .heroBanner img {
+    top: 200px;
+  }
+
+  .heroImg {
+    width: 500px !important;
+    height: 500px !important;
+  }
+
+  .heroBorder {
+    width: 520px !important;
+    height: 520px !important;
+  }
+
+  .CTAText {
+    max-width: 80%;
   }
 }
 
@@ -129,9 +148,14 @@ color: var(--main-green);
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .heroBanner img {
     display: none;
+  }
+
+  .CTAText {
+    max-width: none;
+    width: 100%;
   }
 }
 

@@ -40,7 +40,7 @@ export default function TestimonialComponent() {
         <div className={styles.testimonialBoxes}>
           <div className={styles.testimonialText}>
             <span>TESTIMONIALS</span> <br/>
-            <h2 className={styles.testimonialHeadline}>Das sagen unsere Kunden</h2>
+            <h2 className={styles.testimonialHeadline}>Werde Teil unserer Erfolgsgeschichte!</h2>
           </div>
           <div className={styles.testimonialCarouselContainer}>
             <Carousel
@@ -51,7 +51,7 @@ export default function TestimonialComponent() {
               }}
             >
               <CarouselContent className={styles.responsiveCarousel}>
-                {Array.from({ length: 3 }).map((_, index) => (
+                {Array.from({ length: 1 }).map((_, index) => (
                   <CarouselItem key={index} className={styles.testimonialCarouselBox}>
                     <TestimonialCarousellComponent />
                   </CarouselItem>

@@ -18,10 +18,10 @@ export default function CallToActionComponent() {
         </div>
         <div className={styles.callToActoinText}>
           <Link href={"/auth/contactMail/"}>
-          <button className={styles.callToActionButton}>
-            Beim Newsletter anmelden{" "}
-            <ArrowRight className={styles.buttonArrow} />
-          </button>
+            <button className={styles.callToActionButton}>
+              Beim Newsletter anmelden{" "}
+              <ArrowRight className={styles.buttonArrow} />
+            </button>
           </Link>
           <span>
             Verkaufe oder Vermiete deine Immobilie mit den Tools der Profis.
