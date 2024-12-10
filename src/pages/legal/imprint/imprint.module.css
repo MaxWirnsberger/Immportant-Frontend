@@ -4,7 +4,8 @@
   justify-content: center;
   width: 100%;
   color: #00015e;
-  height: 80dvh;
+  padding: 20px 16px;
+  min-height: 80dvh;
 }
 
 .imprintContent {
@@ -13,6 +14,33 @@
   padding: 40px 16px;
 }
 
-.imprintSpacer {
-  margin-bottom: 20px;
+.imprintContent h1 {
+  font-size: 20pt;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: .5rem;
+
+  font-style: normal;
+  font-weight: 600;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+.imprintContent h2 {
+  font-size: 18pt;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: .5rem;
+
+  font-style: normal;
+  font-weight: 600;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+.imprintContent p {
+  margin-bottom: 1rem;
+  font-size: inherit;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
 }

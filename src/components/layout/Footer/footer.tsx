@@ -13,7 +13,7 @@ export default function FooterComponent() {
         <div className={styles.footerLinks}>
           <a href="/legal/imprint">Impressum</a>
           <a href="/legal/privacy">Datenschutz</a>
-          <a href="/legal/agb">AGB</a>
+          {/* <a href="/legal/agb">AGB</a> */}
           <a href="/contact">Kontakt</a>
         </div>
         <div className="flex space-x-6 mt-4 md:mt-0">
