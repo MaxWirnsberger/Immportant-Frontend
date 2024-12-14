@@ -153,6 +153,11 @@
   gap: 1rem; 
 }
 
+.timePeriodResponse{
+  display: none;
+  padding-left: 30px;
+}
+
 @media (min-width: 640px) {
   .flexContainer {
     flex-direction: row; 
@@ -166,6 +171,16 @@
 
   .overviewText{
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .timePeriod {
+    display: none;
+  }
+
+  .timePeriodResponse{
+    display: block;
   }
 }
 
