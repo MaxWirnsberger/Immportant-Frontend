@@ -9,7 +9,7 @@ import {
   FolderOpen,
   FileText,
   Mail,
-  HousePlus,
+  CalendarDays,
 } from "lucide-react";
 import Link from "next/link";
 import { useSelectedRealEstate } from "@/contexts/selectedRealEstateContext";
@@ -72,58 +72,6 @@ export default function AppSidebarComponent() {
               Objektdetails
             </Link>
           </div>
-
-          {/* <div className={styles.sidebarNavContent}>
-            <Link
-              href={
-                isRealEstateSelected
-                  ? `/app/evaluation/${selectedRealEstateId}`
-                  : "#"
-              }
-              className={`${styles.navLink} ${
-                pathname && pathname.startsWith("/app/evaluation")
-                  ? styles.active
-                  : ""
-              } ${!isRealEstateSelected ? styles.disabled : ""}`}
-            >
-              <ChartSpline />
-              Bewertung
-            </Link>
-          </div> */}
-          {/* <div className={styles.sidebarNavContent}>
-            <Link
-              href={
-                isRealEstateSelected
-                  ? `/app/documents/${selectedRealEstateId}`
-                  : "#"
-              }
-              className={`${styles.navLink} ${
-                pathname && pathname.startsWith("/app/documents")
-                  ? styles.active
-                  : ""
-              } ${!isRealEstateSelected ? styles.disabled : ""}`}
-            >
-              <FolderOpen />
-              Dokumente
-            </Link>
-          </div> */}
-          {/* <div className={styles.sidebarNavContent}>
-            <Link
-              href={
-                isRealEstateSelected
-                  ? `/app/expose/${selectedRealEstateId}`
-                  : "#"
-              }
-              className={`${styles.navLink} ${
-                pathname && pathname.startsWith("/app/expose")
-                  ? styles.active
-                  : ""
-              } ${!isRealEstateSelected ? styles.disabled : ""}`}
-            >
-              <FileText />
-              Exposé
-            </Link>
-          </div> */}
           <div className={styles.sidebarNavContent}>
             <Link
               href={
@@ -147,19 +95,19 @@ export default function AppSidebarComponent() {
             <Link
               href={
                 isRealEstateSelected
-                  ? `/app/advertise/${selectedRealEstateId}`
+                  ? `/app/calender/${selectedRealEstateId}`
                   : "#"
               }
               className={`${styles.navLink} ${
-                pathname && pathname.startsWith("/app/advertise")
+                pathname && pathname.startsWith("/app/calender")
                   ? styles.active
                   : ""
               } ${!isRealEstateSelected ? styles.disabled : ""}`}
             >
               <div>
-                <HousePlus />
+                <CalendarDays />
               </div>
-              Inserieren
+              Kalender
             </Link>
           </div>
         </nav>

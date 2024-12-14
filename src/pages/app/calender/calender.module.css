@@ -1,0 +1,13 @@
+.calenderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 14400px;
+  color: var(--main-blue) !important;
+}
+
+.calenderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -8,6 +8,7 @@ export default function SettingPage() {
 
   // Funktionen für die Navigation
   const navigateToProfile = () => router.push("settings/profile/");
+  const navigateToAdvertise = () => router.push("settings/advertise/");
   const navigateToInvoices = () => router.push("settings/invoice/");
   const navigateToNotifications = () =>
     router.push("settings/notification/");
@@ -18,6 +19,9 @@ export default function SettingPage() {
       <div className={styles.buttonsContainer}>
         <button className={styles.button} onClick={navigateToProfile}>
           Benutzerprofil
+        </button>
+        <button className={styles.button} onClick={navigateToAdvertise}>
+          Portalmanager
         </button>
         <button className={styles.button} onClick={navigateToInvoices}>
           Rechnungen

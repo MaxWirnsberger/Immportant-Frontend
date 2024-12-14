@@ -69,13 +69,13 @@ export default function RealEstatePage() {
         {realEstates.map((estate) => (
           <Card
             key={estate.id}
-            className={`${styles.card} ${styles.cardHover}`}
+            className={styles.card}
             onClick={() => handleSelectRealEstate(estate.id)}
           >
             <div className={styles.imageContainer}>
               {estate.title_image ? (
                 <Image
-                  src={`${BACKEND_URL}media/${estate.title_image.document}`}
+                  src={`${BACKEND_URL}/media/${estate.title_image.document}`}
                   alt={estate.title_image.attachment_titel}
                   layout="fill"
                   objectFit="cover"

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { GraphCard } from "../../../components/appComponents/dashboard/graphCard/GraphCard";
-import { PortaleCard } from "../../../components/appComponents/dashboard/portalCard/PortaleCard";
-import { InquiriesCard } from "../../../components/appComponents/dashboard/inquiriesCard/InquiriesCard";
+import { GraphCard } from "@/components/appComponents/dashboard/graphCard/GraphCard";
+import { PortaleCard } from "@/components/appComponents/dashboard/portalCard/PortaleCard";
+import { InquiriesCard } from "@/components/appComponents/dashboard/inquiriesCard/InquiriesCard";
 import axiosInstance from "@/lib/axiosInstance";
 import styles from "./dashboard.module.css";
 import globalstyle from "../globalApp.module.css";
@@ -15,7 +15,7 @@ interface DashboardData {
   inquiries_last_14_days: {
     date: string;
     Immowelt: number;
-    "Immo-Scout": number;
+    Immo_Scout: number;
     Kleinanzeigen: number;
     Gesamt: number;
   }[];

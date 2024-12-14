@@ -1,7 +1,7 @@
 import styles from "./appFooter.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutPanelLeft, PencilRuler, HousePlus, Building2 } from "lucide-react";
+import { LayoutPanelLeft, PencilRuler, CalendarDays, Building2 } from "lucide-react";
 import { useSelectedRealEstate } from "@/contexts/selectedRealEstateContext";
 
 export default function AppFooterComponent() {
@@ -51,17 +51,17 @@ export default function AppFooterComponent() {
             <Link
               href={
                 isRealEstateSelected
-                  ? `/app/advertise/${selectedRealEstateId}`
+                  ? `/app/calender/${selectedRealEstateId}`
                   : "#"
               }
               className={`${styles.navLink} ${
-                pathname && pathname.startsWith("/app/advertise")
+                pathname && pathname.startsWith("/app/calender")
                   ? styles.active
                   : ""
               } ${!isRealEstateSelected ? styles.disabled : ""}`}
             >
-              <HousePlus />
-              <span>Inserieren</span>
+              <CalendarDays />
+              <span>Kalender</span>
             </Link>
           </div>
           <div className={styles.footerNavContent}>

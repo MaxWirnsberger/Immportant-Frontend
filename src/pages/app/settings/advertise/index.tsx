@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import axiosInstance from "@/lib/axiosInstance";
 import styles from "./advertise.module.css";
-import globalstyle from "../globalApp.module.css";
+import globalstyle from "../../globalApp.module.css";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertCircle, CheckCircle2, Circle, Calendar } from "lucide-react";
 import {
@@ -44,7 +44,7 @@ export default function PortalManagementPage() {
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  const router = useRouter(); // Initialisieren des Routers
+  const router = useRouter();
 
   const handleBulkAction = () => {
     const allActive =
@@ -58,7 +58,7 @@ export default function PortalManagementPage() {
   };
 
   const confirmStatusChange = () => {
-    console.log("realEstateId:", realEstateId); // Debugging
+    console.log("realEstateId:", realEstateId);
     setIsLoading(true);
     setError(null);
     setSuccessMessage(null);
@@ -217,7 +217,7 @@ export default function PortalManagementPage() {
       <h2 className={styles.pageTitle}>Portalmanager</h2>
 
       {/* Ein einzelner Button für Bulk-Aktionen */}
-      <div className={styles.buttonContainer}>
+      {/* <div className={styles.buttonContainer}>
         <Button
           className={
             allActive ? styles.deactivateButton : styles.activateButton
@@ -227,7 +227,7 @@ export default function PortalManagementPage() {
         >
           {isLoading ? "Bitte warten..." : bulkButtonLabel}
         </Button>
-      </div>
+      </div> */}
 
       {/* Fehlermeldung  */}
       {error && (

@@ -21,7 +21,7 @@ interface GraphCardProps {
   data: {
     date: string;
     Immowelt: number;
-    "Immo-Scout": number;
+    Immo_Scout: number;
     Kleinanzeigen: number;
     Gesamt: number;
   }[];
@@ -30,14 +30,14 @@ interface GraphCardProps {
 const views = [
   "Alle Anfragen",
   "Immowelt",
-  "Immo-Scout",
+  "Immo_Scout",
   "Kleinanzeigen",
 ] as const;
 type View = (typeof views)[number];
 
 const chartConfig = {
   Immowelt: { color: "#00015e" },
-  "Immo-Scout": { color: "#00015e" },
+  Immo_Scout: { color: "#00015e" },
   Kleinanzeigen: { color: "#00015e" },
   Gesamt: { color: "#00015e" },
 };
@@ -57,7 +57,7 @@ export function GraphCard({ data }: GraphCardProps) {
     if (platform === "Alle Anfragen") {
       return chartData.some(
         (day) =>
-          day.Immowelt > 0 || day["Immo-Scout"] > 0 || day.Kleinanzeigen > 0
+          day.Immowelt > 0 || day["Immo_Scout"] > 0 || day.Kleinanzeigen > 0
       );
     }
     return chartData.some(

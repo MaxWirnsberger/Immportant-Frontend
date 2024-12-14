@@ -40,7 +40,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.cardHover:hover {
+.card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
