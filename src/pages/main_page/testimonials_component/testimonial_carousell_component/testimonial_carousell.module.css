@@ -87,17 +87,25 @@
     height: 50px !important;
     width: 40px !important;
   }
+
+  .testimonialTextReview{
+    padding-top: 100px;
+  }
 }
 
-@media (max-width: 570px) {
-  .testimonialImgesReview {
-    height: 350px;
+@media (max-width: 500px) {
+  .testimonialTextReview{
+    padding-top: 50px;
   }
 }
 
 @media (max-width: 420px) {
   .testimonialImgesReview {
     height: 300px;
+  }
+
+  .testimonialTextReview{
+    padding-top: 0px;
   }
 }
 

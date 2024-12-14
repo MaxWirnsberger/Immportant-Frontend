@@ -39,11 +39,13 @@ export default function TestimonialComponent() {
         />
         <div className={styles.testimonialBoxes}>
           <div className={styles.testimonialText}>
-            <span>TESTIMONIALS</span> <br/>
-            <h2 className={styles.testimonialHeadline}>Werde Teil unserer Erfolgsgeschichte!</h2>
+            <span>TESTIMONIALS</span> <br />
+            <h2 className={styles.testimonialHeadline}>
+              Werde Teil unserer Erfolgsgeschichte!
+            </h2>
           </div>
           <div className={styles.testimonialCarouselContainer}>
-            <Carousel
+            {/* <Carousel
               orientation={isVertical ? "vertical" : "horizontal"}
               className={styles.testimonialCarouselConten}
               opts={{
@@ -59,7 +61,8 @@ export default function TestimonialComponent() {
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
-            </Carousel>
+            </Carousel> */}
+            <TestimonialCarousellComponent />
           </div>
         </div>
       </div>
