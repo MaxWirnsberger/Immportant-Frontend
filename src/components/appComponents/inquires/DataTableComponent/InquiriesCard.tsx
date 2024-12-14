@@ -217,17 +217,19 @@ export function InquiriesCard({ realEstateId }: InquiriesCardProps) {
                     {`${inquiry.firstname} ${inquiry.lastname}`}
                   </div>
                   <div className={styles.chatPreview}>
-                    {inquiry.inquiry.length > 50
+                    {inquiry.inquiry && inquiry.inquiry.length > 50
                       ? inquiry.inquiry.substring(0, 50) + "..."
-                      : inquiry.inquiry}
+                      : inquiry.inquiry || "Keine Vorschau verfügbar"}
                   </div>
                 </div>
                 <div className={styles.chatItemRight}>
                   <div className={styles.chatTime}>
-                    {new Date(inquiry.date).toLocaleTimeString([], {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
+                    {inquiry.date
+                      ? new Date(inquiry.date).toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })
+                      : "Kein Datum"}
                   </div>
                   {!inquiry.is_read && (
                     <div className={styles.unreadIndicator}></div>

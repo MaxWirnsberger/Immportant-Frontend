@@ -6,7 +6,6 @@ import { InquiriesCard } from "@/components/appComponents/inquires/DataTableComp
 import { useMediaQuery } from "react-responsive";
 
 
-
 export default function Inquires() {
   const [realEstateId, setRealEstateId] = useState<string>("");
 

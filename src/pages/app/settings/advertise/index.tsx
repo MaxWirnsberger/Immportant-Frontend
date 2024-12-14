@@ -90,7 +90,6 @@ export default function PortalManagementPage() {
   useEffect(() => {
     const storedRealEstateId =
       sessionStorage.getItem("selectedRealEstateId") || "";
-    console.log("storedRealEstateId:", storedRealEstateId); // Debugging
     setRealEstateId(storedRealEstateId);
 
     if (storedRealEstateId) {
