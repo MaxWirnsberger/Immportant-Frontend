@@ -1,0 +1,191 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 16px 60px 16px;
+  min-height: calc(100vh - 232px);
+}
+
+.pageTitle {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--main-blue);
+  margin-bottom: 2rem;
+}
+
+.calendarContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.calendar {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+}
+
+.appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.appointmentTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--main-blue);
+}
+
+.appointmentsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.appointmentButtonBooked {
+  background-color: #e5e7eb;
+  color: var(--main-blue);
+  cursor: not-allowed;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.appointmentButtonAvailable,
+.appointmentButtonBooked {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  width: 100%;
+  border-radius: 0.5rem;
+  width: 250px;
+}
+
+.appointmentButtonAvailable {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+}
+
+.appointmentButtonAvailable:hover {
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.dialogTitle {
+  color: var(--primary);
+}
+
+.dialogDescription {
+  color: var(--primary);
+}
+
+.dialogCancelButton {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.dialogCancelButton:hover {
+  background-color: var(--main-green);
+}
+
+.dialogBookButton {
+  background-color: var(--accent);
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.dialogBookButton:hover {
+  background-color: var(--main-green);
+}
+
+.loadingContainer,
+.errorContainer,
+.noDataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--primary);
+}
+
+.loadingText,
+.errorText,
+.noDataText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.inputField {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: var(--main-blue);
+  box-shadow: 0 0 0 1px var(--main-blue);
+}
+
+.errorText {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Optional: Zusätzliche Stile für das Formular */
+.formGroup label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.formGroup input {
+  width: 100%;
+}
+
+@media (max-width: 1160px) {
+  .appointments {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .appointments {
+    min-width: 100px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .calendarContainer {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

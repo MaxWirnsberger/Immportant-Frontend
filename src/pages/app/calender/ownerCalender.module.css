@@ -1,0 +1,185 @@
+.mainContainer {
+  padding: 2rem;
+}
+
+.tabsList {
+  color: var(--main-blue);
+  margin-top: 70px;
+}
+
+.tabsTrigger {
+  color: var(--main-blue);
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabsTriggerActive {
+  background-color: var(--main-green); 
+}
+
+.subtitle {
+  font-size: 1.5rem; 
+  font-weight: 600; 
+  margin-top: 1rem; 
+  margin-bottom: 1rem; 
+  padding-left: 16px;
+  color: var(--main-blue);
+}
+
+.calendarContainer {
+  display: flex;
+  gap: 40px;
+  color: var(--main-blue);
+}
+
+.appointments {
+  max-width: 400px;
+  flex: 1;
+}
+
+.appointmentsTitle {
+  font-size: 1.125rem; 
+  font-weight: 600; 
+  margin-bottom: 0.5rem; 
+  color: var(--main-blue);
+}
+
+.spaceY2 > * + * {
+  margin-top: 0.5rem; 
+}
+
+.spaceY4 > * + * {
+  margin-top: 1rem; 
+}
+
+.availabilityContent{
+  max-width: 800px;
+  color: var(--main-blue);
+}
+
+.formGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.tribbleInputField{
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.tribbleInputField div{
+  width: 100%;
+}
+
+.inputField {
+  border: 1px solid var(--main-blue);
+  color: var(--main-blue);
+  padding: 0.5rem;
+  border-radius: 0.25rem; 
+  width: 100%;
+}
+
+.checkbox {
+  height: 1rem;
+  width: 1rem;
+  color: var(--main-blue);
+  border: 1px solid var(--main-blue);
+  border-radius: 0.25rem;
+}
+
+.buttonUpdate {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonUpdate:hover {
+  background-color: var(--main-green);
+}
+
+.buttonCancel {
+  background-color: var(--main-blue);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonCancel:hover {
+  background-color: var(--main-blue);
+}
+
+.buttonDelete {
+  background-color: #ffdddd;
+  color: #900;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonDelete:hover {
+  background-color: #ffcccc; 
+}
+
+.buttonsFlex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.appointmentListItem, .availabilityListItem {
+  background-color: #ffffff;
+  padding: 1rem; 
+  border-radius: 0.375rem; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.availabilityListItem {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editbutton {
+  padding: 8px;
+  background-color: var(--main-green);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editbutton:hover{
+  background-color: var(--main-blue);
+}
+
+.editbutton:hover .iconStyle{
+  color: white;
+}
+
+.iconStyle{
+  color: var(--main-blue);
+}
+
+.errorContainer, .loadingContainer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--main-blue);
+}
+
+.errorContainer p {
+  color: red;
+}

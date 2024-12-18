@@ -1,6 +1,3 @@
-// ubit@Wks.at
-// +43 662 8888 636
-
 import React, { useEffect, useState } from "react";
 import axiosInstance from "@/lib/axiosInstance";
 import { useRouter } from "next/router";

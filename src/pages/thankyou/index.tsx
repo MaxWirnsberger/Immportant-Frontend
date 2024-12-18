@@ -19,15 +19,39 @@ export default function ThankYouPage() {
         );
       case "register":
         return (
-            <>
-              Vielen Dank für deine Newsletter Anmeldung.
-              <br />
-              <br />
-              Wenn du bereits jetzt fragen hast
-              <br />
-              kontaktiere uns unter <a href="mailto:office@immportant.com" className={styles.ThankYouLink}>office@immportant.com</a>
-            </>
-          );
+          <>
+            Vielen Dank für deine Newsletter Anmeldung.
+            <br />
+            <br />
+            Wenn du bereits jetzt fragen hast
+            <br />
+            kontaktiere uns unter{" "}
+            <a
+              href="mailto:office@immportant.com"
+              className={styles.ThankYouLink}
+            >
+              office@immportant.com
+            </a>
+          </>
+        );
+      case "booking":
+        return (
+          <>
+            Vielen Dank für deine Buchung. 
+            Wir haben dir eine E-Mailbestätigung gesandt
+            <br />
+            <br />
+            Wenn du bereits jetzt fragen hast
+            <br />
+            kontaktiere uns unter{" "}
+            <a
+              href="mailto:office@immportant.com"
+              className={styles.ThankYouLink}
+            >
+              office@immportant.com
+            </a>
+          </>
+        );
       default:
         return "Vielen Dank für deine Aktion.";
     }
