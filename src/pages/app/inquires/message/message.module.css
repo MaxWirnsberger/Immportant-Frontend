@@ -17,95 +17,58 @@
   gap: 16px;
 }
 
-.categoryButtons {
+.categorySection {
+  margin-bottom: 16px;
+}
+
+.radioGroup {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.categoryButton {
+.radioOption {
+  position: relative;
+}
+
+.radioLabel {
   padding: 8px 16px;
-  background-color: #eee;
-  border: 1px solid #ccc;
+  border-radius: 9999px;
   cursor: pointer;
-  border-radius: 4px;
-  color: #333;
   transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
 }
 
-.categoryButton.perfect {
-  /* background-color: #d4edda;  */
-  background-color: transparent;
-  border: 2px solid #c3e6cb;
-  color: var(--main-blue);
-  font-weight: 600;
-}
-
-.categoryButton.maybe {
-  /* background-color: #fff3cd;  */
-  background-color: transparent;
-  border: 2px solid #ffeeba;
-  color: var(--main-blue);
-  font-weight: 600;
-}
-
-.categoryButton.unattractive {
-  /* background-color: #f8d7da; */
-  background-color: transparent;
-  border: 2px solid #f5c6cb;
-  color: var(--main-blue);
-  font-weight: 600;
-}
-
-.categoryButton.active.perfect {
-  background-color: var(--main-green);
-  border: 2px solid var(--main-green);
-  color: var(--main-blue);
-}
-
-.categoryButton.active.maybe {
-  background-color: yellow;
-  color: var(--main-blue);
-}
-
-.categoryButton.active.unattractive {
-  background-color: #dc3545; 
-  border-color: #dc3545;
-  color: #fff;
-}
-
-.is_readButton {
-  border-radius: 8px;
-  border: 2px solid var(--main-blue);
-  padding: 8px 16px;
-  cursor: pointer;
-}
-
-.is_readButton:hover {
-  background-color: var(--main-blue);
+.perfectActive {
+  background-color: #4caf50;
   color: white;
 }
 
-.is_readButton.active {
-  background-color: var(--main-blue);
+.perfectInactive {
+  background-color: #e0e0e0; 
+  color: #424242; 
+}
+
+.maybeActive {
+  background-color: #ffeb3b; 
+  color: var(--main-blue);
+}
+
+.maybeInactive {
+  background-color: #e0e0e0; 
+  color: #424242; 
+}
+
+.unattractiveActive {
+  background-color: #f44336; 
   color: white;
 }
 
-.favoritButton {
-  border-radius: 100%;
-  padding: 8px;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.favoritButton:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.filledIcon {
-  color: var(--main-green);
+.unattractiveInactive {
+  background-color: #e0e0e0; 
+  color: #424242;
 }
 
 .row {
@@ -155,7 +118,6 @@
 }
 
 .messageDeleteButton {
-  /* background-color: red; */
   border-radius: 8px;
   border: 2px solid #dc3545;
   color: var(--main-blue);
@@ -167,19 +129,43 @@
   color: white;
 }
 
-@media (max-width: 550px) {
-  .row {
-    flex-direction: column;
-  }
+.is_readButton {
+  border-radius: 8px;
+  border: 2px solid var(--main-blue);
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-@media (max-width: 400px) {
-  .is_readButton {
-    font-size: 14px;
-  }
+.is_readButton:hover {
+  background-color: var(--main-blue);
+  color: white;
 }
 
-/* Styling für den Chat */
+.is_readButton.active {
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.calenderMessageButton {
+  background-color: var(--main-blue);
+}
+
+.calenderMessageButton:hover {
+  background-color: var(--main-green);
+  color: var(--main-blue);
+}
+
+.rejectMessageButton {
+  border: 2px solid #dc3545;
+  background-color: transparent;
+  color: #dc3545;
+}
+
+.rejectMessageButton:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
 .chatContainer {
   display: flex;
   flex-direction: column;
@@ -212,4 +198,27 @@
   font-size: 0.75rem;
   color: #6c757d;
   margin-top: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 550px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .is_readButton {
+    font-size: 14px;
+  }
 }

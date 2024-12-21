@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+'use client'
+
+import React, { useEffect, useState, useRef } from "react";
 import axiosInstance from "@/lib/axiosInstance";
 import { useRouter } from "next/router";
 import styles from "./message.module.css";
@@ -7,6 +9,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { CalendarDays } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface ChatMessage {
   id: string;
@@ -34,6 +47,8 @@ interface Message {
   chat_messages: ChatMessage[];
 }
 
+type Category = 'perfect' | 'maybe' | 'unattractive';
+
 export default function MessagePage() {
   const [realEstateId, setRealEstateId] = useState<string>("");
   const [message, setMessage] = useState<Message | null>(null);
@@ -41,6 +56,21 @@ export default function MessagePage() {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const { messageId } = router.query;
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+  const [invitationMessage, setInvitationMessage] = useState<string>("");
+  const [isRejectDialogOpen, setIsRejectDialogOpen] = useState<boolean>(false);
+  const [rejectMessage, setRejectMessage] = useState<string>("");
+  const [activeTab, setActiveTab] = useState<string>("interested");
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  };
 
   useEffect(() => {
     const storedRealEstateId =
@@ -64,7 +94,6 @@ export default function MessagePage() {
             setMessage(messageData);
           }
 
-          // Chat-Nachrichten laden
           const chatResponse = await axiosInstance.get(
             `/feedback/message/${messageId}/chat/`
           );
@@ -76,6 +105,12 @@ export default function MessagePage() {
       fetchMessage();
     }
   }, [messageId]);
+
+  useEffect(() => {
+    if (activeTab === "messages") {
+      scrollToBottom();
+    }
+  }, [activeTab, chatMessages]);
 
   const handleToggleReadStatus = async () => {
     if (!message) {
@@ -96,9 +131,7 @@ export default function MessagePage() {
     }
   };
 
-  const handleCategoryChange = async (
-    newCategory: "perfect" | "maybe" | "unattractive"
-  ) => {
+  const handleCategoryChange = async (newCategory: Category) => {
     if (!message) {
       setError("Nachricht nicht geladen.");
       return;
@@ -116,41 +149,78 @@ export default function MessagePage() {
     }
   };
 
-  const handleInvite = async () => {
-    if (!message) return;
-    try {
-      // Logik für das Versenden der Einladung (z.B. E-Mail senden)
+  const handleInvite = () => {
+    setIsDialogOpen(true);
+  };
 
-      // Neue ChatMessage hinzufügen
-      const response = await axiosInstance.post(
-        `/feedback/message/${messageId}/chat/`,
+  const sendInvitation = async () => {
+    if (!message) {
+      setError("Nachricht nicht geladen.");
+      return;
+    }
+
+    if (!invitationMessage.trim()) {
+      setError("Nachricht darf nicht leer sein.");
+      return;
+    }
+
+    try {
+      await axiosInstance.post(
+        `/feedback/inquire/${message.id}/invite-calendar/`,
         {
-          sender: "owner",
-          message: "Sie wurden zu einem Termin eingeladen.",
+          message: invitationMessage,
         }
       );
-      setChatMessages((prevMessages) => [...prevMessages, response.data]);
+
+      const newChatMessage: ChatMessage = {
+        id: Date.now().toString(), // Temporäre ID
+        sender: "owner",
+        message: invitationMessage,
+        timestamp: new Date().toISOString(),
+      };
+      setChatMessages((prevMessages) => [...prevMessages, newChatMessage]);
+      setIsDialogOpen(false);
+      setInvitationMessage("");
+      setActiveTab("messages");
     } catch (err) {
       console.error("Fehler beim Senden der Einladung:", err);
+      setError("Fehler beim Senden der Einladung.");
     }
   };
 
-  const handleReject = async () => {
-    if (!message) return;
-    try {
-      // Logik für das Versenden der Absage (z.B. E-Mail senden)
+  const handleReject = () => {
+    setIsRejectDialogOpen(true);
+  };
 
-      // Neue ChatMessage hinzufügen
-      const response = await axiosInstance.post(
-        `/feedback/message/${messageId}/chat/`,
-        {
-          sender: "owner",
-          message: "Ihre Anfrage wurde leider abgelehnt.",
-        }
-      );
-      setChatMessages((prevMessages) => [...prevMessages, response.data]);
+  const sendRejection = async () => {
+    if (!message) {
+      setError("Nachricht nicht geladen.");
+      return;
+    }
+
+    if (!rejectMessage.trim()) {
+      setError("Nachricht darf nicht leer sein.");
+      return;
+    }
+
+    try {
+      await axiosInstance.post(`/feedback/inquire/${message.id}/reject/`, {
+        message: rejectMessage,
+      });
+
+      const newChatMessage: ChatMessage = {
+        id: Date.now().toString(), 
+        sender: "owner",
+        message: rejectMessage,
+        timestamp: new Date().toISOString(),
+      };
+      setChatMessages((prevMessages) => [...prevMessages, newChatMessage]);
+      setIsRejectDialogOpen(false);
+      setRejectMessage("");
+      setActiveTab("messages");
     } catch (err) {
       console.error("Fehler beim Senden der Absage:", err);
+      setError("Fehler beim Senden der Absage.");
     }
   };
 
@@ -193,7 +263,11 @@ export default function MessagePage() {
         {message.firstname} {message.lastname}
       </h2>
 
-      <Tabs defaultValue="interested">
+      <Tabs
+        value={activeTab}
+        onValueChange={setActiveTab}
+        defaultValue="interested"
+      >
         <TabsList className={styles.registerTabs}>
           <TabsTrigger value="interested">Interessent</TabsTrigger>
           <TabsTrigger value="messages">Nachrichten</TabsTrigger>
@@ -202,39 +276,59 @@ export default function MessagePage() {
         <TabsContent value="interested">
           <div className={styles.messageContainer}>
             <div className={styles.actionButtons}>
-              {/* Kategorie-Buttons */}
-              <div>
+              <div className={styles.categorySection}>
                 <p>Wie findest du die Anfrage?</p>
-                <div className={styles.categoryButtons}>
-                  <button
-                    onClick={() => handleCategoryChange("perfect")}
-                    className={`${styles.categoryButton} ${
-                      message.category === "perfect" ? styles.active : ""
-                    } ${styles.perfect}`}
-                  >
-                    Perfekt
-                  </button>
-                  <button
-                    onClick={() => handleCategoryChange("maybe")}
-                    className={`${styles.categoryButton} ${
-                      message.category === "maybe" ? styles.active : ""
-                    } ${styles.maybe}`}
-                  >
-                    Vielleicht
-                  </button>
-                  <button
-                    onClick={() => handleCategoryChange("unattractive")}
-                    className={`${styles.categoryButton} ${
-                      message.category === "unattractive" ? styles.active : ""
-                    } ${styles.unattractive}`}
-                  >
-                    Uninteressant
-                  </button>
-                </div>
+                <RadioGroup
+                  value={message.category || "maybe"}
+                  onValueChange={(value: string) => {
+                    const category = value as Category;
+                    handleCategoryChange(category);
+                  }}
+                  className={styles.radioGroup}
+                >
+                  <div className={styles.radioOption}>
+                    <RadioGroupItem value="perfect" id="perfect" className="sr-only" />
+                    <Label
+                      htmlFor="perfect"
+                      className={`${styles.radioLabel} ${
+                        message.category === 'perfect'
+                          ? styles.perfectActive
+                          : styles.perfectInactive
+                      }`}
+                    >
+                      Perfekt
+                    </Label>
+                  </div>
+                  <div className={styles.radioOption}>
+                    <RadioGroupItem value="maybe" id="maybe" className="sr-only" />
+                    <Label
+                      htmlFor="maybe"
+                      className={`${styles.radioLabel} ${
+                        message.category === 'maybe'
+                          ? styles.maybeActive
+                          : styles.maybeInactive
+                      }`}
+                    >
+                      Vielleicht
+                    </Label>
+                  </div>
+                  <div className={styles.radioOption}>
+                    <RadioGroupItem value="unattractive" id="unattractive" className="sr-only" />
+                    <Label
+                      htmlFor="unattractive"
+                      className={`${styles.radioLabel} ${
+                        message.category === 'unattractive'
+                          ? styles.unattractiveActive
+                          : styles.unattractiveInactive
+                      }`}
+                    >
+                      Uninteressant
+                    </Label>
+                  </div>
+                </RadioGroup>
               </div>
             </div>
 
-            {/* Restlicher Inhalt */}
             <div className={styles.row}>
               <div className={styles.fieldGroup}>
                 <Label className={styles.fieldLabel}>Vorname:</Label>
@@ -316,8 +410,7 @@ export default function MessagePage() {
 
         <TabsContent value="messages">
           <div className={styles.messageContainer}>
-            {/* Chat-Anzeige */}
-            <div className={styles.chatContainer}>
+            <div className={styles.chatContainer} ref={chatContainerRef}>
               {chatMessages.map((chatMessage) => (
                 <div
                   key={chatMessage.id}
@@ -335,7 +428,6 @@ export default function MessagePage() {
               ))}
             </div>
 
-            {/* Aktionen */}
             <div className={styles.actionButtons}>
               <button
                 className={`${styles.is_readButton} ${
@@ -356,6 +448,65 @@ export default function MessagePage() {
           </div>
         </TabsContent>
       </Tabs>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Kalender einladen</DialogTitle>
+            <DialogDescription>
+              Bitte verfasse eine Nachricht für die Einladung.
+            </DialogDescription>
+          </DialogHeader>
+          <Textarea
+            placeholder="Nachricht..."
+            value={invitationMessage}
+            onChange={(e) => setInvitationMessage(e.target.value)}
+            className="mt-4"
+          />
+          <DialogFooter>
+            <Button
+              className={styles.calenderMessageButton}
+              onClick={sendInvitation}
+            >
+              Senden
+            </Button>
+            <Button variant="ghost" onClick={() => setIsDialogOpen(false)}>
+              Abbrechen
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={isRejectDialogOpen} onOpenChange={setIsRejectDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Absage senden</DialogTitle>
+            <DialogDescription>
+              Bitte verfasse eine Nachricht für die Absage.
+            </DialogDescription>
+          </DialogHeader>
+          <Textarea
+            placeholder="Nachricht..."
+            value={rejectMessage}
+            onChange={(e) => setRejectMessage(e.target.value)}
+            className="mt-4"
+          />
+          <DialogFooter>
+            <Button
+              className={styles.rejectMessageButton}
+              onClick={sendRejection}
+            >
+              Absagen
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => setIsRejectDialogOpen(false)}
+            >
+              Abbrechen
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
