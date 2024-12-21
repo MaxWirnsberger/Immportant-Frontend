@@ -1,0 +1,6 @@
+.bookingContainer{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 232px);
+    color: var(--main-blue);
+}

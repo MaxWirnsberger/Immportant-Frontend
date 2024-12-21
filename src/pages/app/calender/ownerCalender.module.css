@@ -1,3 +1,4 @@
+/* ownerCalender.module.css */
 .mainContainer {
   padding: 2rem;
 }
@@ -83,6 +84,14 @@
   width: 100%;
 }
 
+.dateInputField {
+  border: 1px solid var(--main-blue);
+  color: var(--main-blue);
+  padding: 0.5rem;
+  border-radius: 0.25rem; 
+  width: 100%;
+}
+
 .checkbox {
   height: 1rem;
   width: 1rem;
@@ -105,7 +114,7 @@
   background-color: var(--main-green);
 }
 
-.buttonCancel {
+.closeButton {
   background-color: var(--main-blue);
   color: #ffffff;
   padding: 0.5rem 1rem;
@@ -115,22 +124,23 @@
   transition: background-color 0.3s;
 }
 
-.buttonCancel:hover {
+.closeButton:hover {
   background-color: var(--main-blue);
 }
 
-.buttonDelete {
-  background-color: #ffdddd;
+.deleteSlotButton {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid #900;
   color: #900;
   padding: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.buttonDelete:hover {
-  background-color: #ffcccc; 
+.deleteSlotButton:hover {
+  background-color: #900;
+  color: white;
 }
 
 .buttonsFlex {
@@ -182,4 +192,32 @@
 
 .errorContainer p {
   color: red;
+}
+
+
+.buttonCancelBooking {
+  background-color: #e53e3e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.buttonCancelBooking:hover {
+  background-color: #c53030;
+}
+
+.buttonDelete {
+  background-color: #e53e3e;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  background-color: #c53030;
 }

@@ -52,6 +52,23 @@ export default function ThankYouPage() {
             </a>
           </>
         );
+        case "cancel":
+          return (
+            <> 
+              Wir haben dir deine Stornierung an den Eigentümer gesandt
+              <br />
+              <br />
+              Wenn du fragen hast
+              <br />
+              kontaktiere uns unter{" "}
+              <a
+                href="mailto:office@immportant.com"
+                className={styles.ThankYouLink}
+              >
+                office@immportant.com
+              </a>
+            </>
+          );
       default:
         return "Vielen Dank für deine Aktion.";
     }
